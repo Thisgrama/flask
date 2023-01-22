@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widith=device-width, initial scale=1.0">
+    <link rel='stylesheet' href= '{{ url_for("static", filename="styles.css") }}'>
+    <title>Conversor de moedas</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="titleContainer">
+            <h1>Conversor de moedas</h1>
+        </div>
+        <div class="dropdown-container">
+            <div class="first-dropdown">
+                <label for="dropdown1">Select an option:</label>
+                <select name="dropdown1" id="dropdown1">
+                    {% for moeda in moedas %}
+                    <option value="{{ moeda }}">{{ moeda }}</option>
+                    {% endfor %}
+                </select>
+                <div class="dropdown-text">
+                    €1
+                </div>
+            </div>
+            <div class="second-dropdown">
+                <label for="dropdown1">Select an option:</label>
+                <select name="dropdown1" id="dropdown1">
+                    {% for moeda in moedas %}
+                    <option value="{{ moeda }}">{{ moeda }}</option>
+                    {% endfor %}
+                </select>
+                <div class="dropdown-text">
+                    USD$1,080983
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+  </bod>
+</html>
